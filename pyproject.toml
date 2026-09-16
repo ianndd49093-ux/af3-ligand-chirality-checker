@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "af3-ligand-chirality-checker"
+version = "0.1.0"
+description = "Research prototype for checking ligand 3D tetrahedral chirality against isomeric SMILES"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = ["rdkit==2026.3.6"]
+
+[project.scripts]
+af3-chirality-check = "af3_ligand_chirality_check:main"
+
+[tool.setuptools]
+py-modules = ["af3_ligand_chirality_check"]
